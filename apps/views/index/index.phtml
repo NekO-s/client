@@ -1,0 +1,32 @@
+<?php
+
+/** @var $form \Apps\Forms\UrlForm */
+/** @var $url string */
+?>
+
+<h1>Shorten url</h1>
+
+<p><?php $this->flash->output() ?></p>
+
+<?php if (!is_null($url)) { ?>
+
+    <div style="font-size: 20px; color: darkgreen;">
+        Ссылка: <a href="<?php echo $url; ?>" target="_blank"><?php echo $url; ?></a>
+    </div>
+
+    <br />
+
+<?php } ?>
+
+<form method='post'>
+
+    <?= $form->render('url', [
+        'placeholder' => 'Input link',
+        'required' => true,
+    ]) ?>
+
+    <p>
+        <input type='submit' value='Save' />
+    </p>
+
+</form>

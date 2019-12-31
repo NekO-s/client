@@ -1,0 +1,9 @@
+{
+  "require": {
+    "php": ">=7.2.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "phalcon/incubator": "^3.4",
+    "fguillot/json-rpc": "^1.2"
+  }
+}
